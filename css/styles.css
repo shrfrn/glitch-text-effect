@@ -19,9 +19,10 @@ h1 {
 	background-image: 
         radial-gradient(circle, rgba(255, 255, 255, 0.05), #333333b3 ),
         linear-gradient(lightsteelblue 60%, #333 6%);
+
 	background-size: 100% 7px;
-	background-clip: text;
 	background-position: 0% 0%;
+	background-clip: text;
 	-webkit-background-clip: text;
 
 	color: transparent;
@@ -30,10 +31,11 @@ h1 {
 
 	transition: 600ms;
 	animation: 
-        verticalScroll 100s infinite, 
+        verticalScroll 100s linear infinite, 
         skew 5s infinite step-end, 
         glitch 8s infinite step-end;
 }
+
 @keyframes verticalScroll {
 	to {
 		background-position: 0% 100%;
@@ -62,19 +64,4 @@ h1 {
     60%{ transform: skew(63deg, 0deg) scaleY(.25); }
     90%{ transform: skew(63deg, 9deg) scaleY(.25); }
     21%, 41%, 61%, 91% { transform: none; }
-}
-
-.highlight {
-	color: lightsteelblue;
-	scale: 1.3;
-	animation: rotate 600ms ease-in-out;
-}
-
-@keyframes rotate {
-	25% {
-		rotate: -20deg;
-	}
-	75% {
-		rotate: 20deg;
-	}
 }
